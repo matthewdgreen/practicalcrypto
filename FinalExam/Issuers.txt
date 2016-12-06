@@ -1,0 +1,26 @@
+
+Keystore type: BKS
+Keystore provider: BC
+
+Your keystore contains 1 entry
+
+Alias name: ca
+Creation date: Mar 26, 2014
+Entry type: trustedCertEntry
+
+Owner: C=US,ST=Oregon,L=Beaverton,O=by Lock,OU=CA,CN=David Keynes
+Issuer: C=US,ST=Oregon,L=Beaverton,O=by Lock,OU=CA,CN=David Keynes
+Serial number: 37461b0
+Valid from: Mon Mar 17 13:00:49 EDT 2014 until: Thu Mar 14 13:00:49 EDT 2024
+Certificate fingerprints:
+	 MD5:  A3:B5:2D:3E:EF:85:11:2C:0F:06:EB:5C:95:07:5F:D2
+	 SHA1: 38:B5:7E:58:AC:33:9F:51:DA:4D:D2:68:2E:8F:CB:04:E3:EF:A3:AA
+	 SHA256: 8F:3F:4A:90:D0:5C:80:39:A8:E5:4F:50:B8:5B:BD:00:93:56:C4:2E:42:62:24:22:B0:78:9D:C4:FE:C5:0E:CF
+	 Signature algorithm name: SHA256WithRSAEncryption
+	 Version: 3
+
+
+*******************************************
+*******************************************
+
+
