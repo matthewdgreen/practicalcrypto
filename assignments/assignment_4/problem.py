@@ -40,7 +40,7 @@ class ECDSA:
     def __init__(self, sk):
         self.sk = sk
         # Randomness required for signatures is sampled using AES in counter mode
-        self.rgen = AES.new(os.urandom(16), AES.MODE_CTR)
+        self.rgen = AES.new(os.urandom(16), AES.MODE_ECB)
 
     # Hash a bytestring into an integer that is in {0, ..., N-1} where N is the order of the
     # elliptic curve
@@ -60,7 +60,11 @@ class ECDSA:
         # Point of Interest #
         #####################
         while True:
-            k = int.from_bytes(self.rgen.encrypt(b"0"), "big") % N
+            # Generate 256 bits using AES
+            rbyte = os.urandom(1)
+            k = self.rgen.encrypt(rbyte + 15 * b"0" + rbyte + 15 * b"1"), "big"
+            # Convert to integer and valid exponent for the elliptic curve
+            k = int.from_bytes(self.rgen.encrypt(rbyte + 15 * b"0" + rbyte + 15 * b"1"), "big") % N
             if k == 0:
                 continue
 
