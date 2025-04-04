@@ -62,7 +62,6 @@ class ECDSA:
         while True:
             # Generate 256 bits using AES
             rbyte = os.urandom(1)
-            k = self.rgen.encrypt(rbyte + 15 * b"0" + rbyte + 15 * b"1"), "big"
             # Convert to integer and valid exponent for the elliptic curve
             k = int.from_bytes(self.rgen.encrypt(rbyte + 15 * b"0" + rbyte + 15 * b"1"), "big") % N
             if k == 0:
