@@ -39,7 +39,7 @@ class ECDSA:
     # Required only to compute signatures since verification is a static method.
     def __init__(self, sk):
         self.sk = sk
-        # Randomness required for signatures is sampled using AES in counter mode
+        # Randomness required for signatures is sampled using AES in ECB mode
         self.rgen = AES.new(os.urandom(16), AES.MODE_ECB)
 
     # Hash a bytestring into an integer that is in {0, ..., N-1} where N is the order of the
